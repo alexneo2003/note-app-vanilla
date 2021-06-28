@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Note App by Alex_Neo</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="container">
+      <table id="notes-table">
+        <thead>
+          <tr class="table-header">
+            <th></th>
+            <th>Name</th>
+            <th>Created</th>
+            <th>Category</th>
+            <th>Content</th>
+            <th>Dates</th>
+            <th>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="white"
+                  class="bi bi-file-zip"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6.5 7.5a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v.938l.4 1.599a1 1 0 0 1-.416 1.074l-.93.62a1 1 0 0 1-1.109 0l-.93-.62a1 1 0 0 1-.415-1.074l.4-1.599V7.5zm2 0h-1v.938a1 1 0 0 1-.03.243l-.4 1.598.93.62.93-.62-.4-1.598a1 1 0 0 1-.03-.243V7.5z"
+                  />
+                  <path
+                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm5.5-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9v1H8v1h1v1H8v1h1v1H7.5V5h-1V4h1V3h-1V2h1V1z"
+                  />
+                </svg>
+              </button>
+
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="white"
+                  class="bi bi-trash-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                  />
+                </svg>
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="notes-list"></tbody>
+      </table>
+      <div class="row-end">
+        <button id="create-note">Create Note</button>
+      </div>
+    </div>
+    <div class="modal" id="modal-one">
+      <div class="modal-bg modal-exit"></div>
+      <div class="modal-container">
+        <h2>Add New Note</h2>
+        <button class="modal-close modal-exit">X</button>
+        <form id="add-note-form">
+          <div class="row">
+            <label for="inputName">Name</label>
+            <input type="text" name="inputName" id="input-name" required />
+          </div>
+          <div class="row">
+            <label for="selectCategory">Category</label>
+            <select name="selectCategory" id="select-category">
+              <option value="Task">Task</option>
+              <option value="Random Thought">Random Thought</option>
+              <option value="Idea">Idea</option>
+              <option value="Quote">Quote</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="content">Content</label>
+          </div>
+          <div class="row">
+            <textarea name="inputContent" id="input-content" rows="5" required>
+            I’m gonna have a dentist appointment on the 3/5/2021, I moved it from 5/5/2021</textarea
+            >
+          </div>
+          <div class="row-end">
+            <button type="submit">Save Note</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>
