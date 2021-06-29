@@ -2,18 +2,27 @@ body {
   font-family: sans-serif;
 }
 .container {
-  width: 968px;
+  width: 960px;
   margin: 0 auto;
 }
-#notes-table {
+#notes-table,
+#notes-stats-table {
   width: 100%;
+  text-align: left;
+}
+
+#notes-stats-table {
+  margin-top: 64px;
 }
 
 .table-header {
   background-color: dimgrey;
   height: 36px;
   color: white;
-  border-bottom: 6px solid white;
+}
+
+#notes-stats-table .table-header tr {
+  display: block;
 }
 
 .table-header th:first-child {
@@ -25,12 +34,63 @@ body {
   border-top-right-radius: 4px;
 }
 
-th button {
+.table-header button {
   background: transparent;
   border: none;
 }
 
-#category-icon span {
+tbody td {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+#table-name,
+#table-created,
+#table-category,
+#table-content,
+#table-dates {
+  display: inline-block;
+  line-height: 38px;
+}
+
+#table-category-icon {
+  width: 40px;
+}
+#table-name {
+  width: 150px;
+}
+#table-created {
+  width: 120px;
+}
+#table-category {
+  width: 130px;
+}
+#table-content {
+  width: 220px;
+}
+#table-dates {
+  width: 160px;
+}
+#table-action-buttons {
+  width: 100px;
+}
+#table-action-buttons button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin: 2px;
+  color: dimgrey;
+  & svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+#table-category-icon span,
+#table-stats-category-icon span {
   display: block;
   border-radius: 50% 50%;
   background-color: gray;
@@ -40,19 +100,51 @@ th button {
   height: 24px;
 }
 
-#category-icon span svg {
+#table-category-icon span svg,
+#table-stats-category-icon span svg {
   width: 20px;
   height: auto;
   margin: auto;
   display: block;
 }
 
-#notes-list {
+#table-stats-category-icon,
+#table-stats-category,
+#table-stats-active,
+#table-stats-archived {
+  display: inline-block;
+  line-height: 38px;
+}
+
+#table-stats-category-icon {
+  width: 40px;
+}
+#table-stats-category {
+  width: 350px;
+}
+#table-stats-active {
+  width: 150px;
+}
+#table-stats-archived {
+  width: 80px;
+}
+#table-stats-archived button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  padding: 0;
+}
+
+#notes-list,
+#notes-stats-list {
   background-color: lightgray;
 }
 
-#notes-list tr {
-  border-bottom: 6px solid white;
+#notes-list tr,
+#notes-stats-list tr {
+  border-bottom: 4px solid white;
+  border-top: 4px solid white;
 }
 
 table {
